@@ -1,0 +1,57 @@
+
+    <%- include('../layout/header')-%>
+
+<!-- base section -->
+<div class=" main_conatiner">
+  <div class="w-50 px-5">
+  
+
+        <form class="row g-3" action="/" method="POST">
+          <h2 class="text-center header_name">Login</h2>
+
+    
+          <div class="col-md-12">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="enter the email" />
+            <!-- <% if(locals.error_email){ %>
+              <div class="alter alert-success text-center text-danger">
+                  <%=error_email%>
+              </div>
+          <% }%> -->
+          </div>
+        
+          <div class="col-12">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              name="password"
+              placeholder="enter the password"
+            />
+            <!-- <% if(locals.error_password){ %>
+              <div class="alter alert-success text-center text-danger">
+                  <%=error_password%>
+              </div>
+          <% }%> -->
+          </div>
+        
+       
+        
+          <div class="col-12">
+            <button type="submit" class="btn w-100 signup_btn">Sign in</button>
+          </div>
+          <p class="lead mt-4">Have An Account? <a href="/register">Register</a></p>
+          <p class="lead mt-4"> <a href="/admin">admin login</a></p>
+
+          <% if(typeof message !== 'undefined'){
+            %>
+        <p class="text-success"><%= message %></p>
+            <%
+          } %>
+        </form>
+        </div>
+</div>
+
+<!-- footer section -->
+<%- include('../layout/footer')-%>

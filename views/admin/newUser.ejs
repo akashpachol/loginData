@@ -1,0 +1,79 @@
+<!-- register.ejs -->
+<%- include('../layout/header')-%>
+<div class="mt-5 mx-5">
+    <button type="button" class=" btn bg-primary ">
+        <a  href="/admin/dashboard" class="text-white" style="text-decoration: none;"> back</a>
+
+    </button>
+</div>
+
+    <div class="row  main_conatiner_admin">
+<div class="col-md-3">
+
+</div>
+
+        <div class="col-md-6 ">
+          <div class=" mt-5 ">
+            <h3 class="text-center mb-3">
+              <i class="fas fa-user-plus"></i> Register
+            </h3>
+            <form class="ms-5 ps-5 " action="/admin/newUser" method="POST">
+              <div class="form-group my-3 ">
+                <!-- <label for="name">Name</label> -->
+                <input
+                  type="name"
+                  id="name"
+                  name="name"
+                  class="form-control w-75"
+                  placeholder="Enter Name"
+                />
+              </div>
+              <div class="form-group my-3">
+                <!-- <label for="email">Email</label> -->
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control w-75"
+                  placeholder="Enter Email"
+                />
+              </div>
+              <div class="form-group my-3">
+                <!-- <label for="email">mobile</label> -->
+                <input
+                  type="number"
+                  id="mobile"
+                  name="mobile"
+                  class="form-control w-75"
+                  placeholder="Enter mobile "
+                />
+              </div>
+              <div class="form-group my-3">
+                <!-- <label for="password">Password</label> -->
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="form-control w-75"
+                  placeholder="Create Password"
+                />
+              </div>
+             
+            
+              <div class="col-12">
+                <button type="submit" class="btn w-75 signup_btn">Sign in</button>
+              </div>
+
+            </form>
+          <% if(typeof message !== 'undefined'){
+            %>
+        <p class="text-success"><%= message %></p>
+            <%
+          } %>
+
+          </div>
+        </div>
+      </div>
+
+      <%- include('../layout/footer')-%>
+    
